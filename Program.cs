@@ -13,7 +13,6 @@
 
             string result2 = moodAnalyser.msg;
             Console.WriteLine(result1);
-
             Console.WriteLine(result2);
 
 
