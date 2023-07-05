@@ -8,42 +8,28 @@ namespace MoodAnalyzer
 {
     public class Mood
     {
-        public string analyseMood(string message)
+        string message;
+        public Mood(string Message)
         {
-            if (message == "I am in Sad Mood")
+            this.message = Message;
+        }
+        public string AnalyzeMood()
+        {
+            try
             {
-                message = "SAD";
-                return message;
-
+                if (message.ToLower().Contains("happy"))
+                {
+                    return "happy";
+                }
+                else
+                {
+                    return "sad";
+                }
             }
-            else
+            catch (NullReferenceException)
             {
-                message = "HAPPY";
-                return message;
+                return "happy";
             }
-        }
-
-    }
-    public class MoodAnalyser
-    {
-
-        public string msg;
-        public MoodAnalyser()
-        {
-            this.msg = "SAD";
-        }
-        public MoodAnalyser(string msg1)
-        {
-            this.msg = msg1;
-
-        }
-
-        public string analyseMood1()
-        {
-            MoodAnalyser obj = new MoodAnalyser();
-            obj.msg = "HAPPY";
-            return obj.msg;
-
         }
 
     }
