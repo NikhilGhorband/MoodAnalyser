@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyser
 {
-    public class MoodAnalyzer
+    public class MoodAnalyser
     {
         string message;
-        public MoodAnalyzer(string Message)
+
+        public MoodAnalyser()
         {
-            this.message = Message;
+        }
+
+        public MoodAnalyser(string message)
+        {
+            this.message = message;
         }
         public string AnalyzeMood()
         {
@@ -33,7 +38,9 @@ namespace MoodAnalyser
             catch (NullReferenceException)
             {
                 throw new CustomException(CustomException.Exception_Type.NULL_EXCEPTION, "Mood should not be NULL");
+
             }
         }
+
     }
 }
