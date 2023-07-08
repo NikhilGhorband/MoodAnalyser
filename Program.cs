@@ -1,4 +1,4 @@
-﻿namespace MoodAnalyzer
+﻿namespace MoodAnalyser
 {
     public class Program
     {
@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Enter mood Happy/Sad : ");
             string M = Console.ReadLine();
-            Mood mood = new Mood(M);
+            MoodAnalyzer mood = new MoodAnalyzer(M);
             Console.WriteLine(mood.AnalyzeMood());
         }
     }
